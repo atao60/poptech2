@@ -1,6 +1,6 @@
 {
   "name": "popsuite-site",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -31,5 +31,25 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
-  }
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.13.0",
+    "npm": ">=6.11.0"
+  },
+  "author": "Pierre Raoul <atao60.dev@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atao60/poptech2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atao60/poptech2/issues"
+  },
+  "homepage": "https://github.com/atao60/poptech2#readme",
+  "keywords": [
+    "blog",
+    "scully",
+    "angular"
+  ],
+  "description": "Personal blog written with Scully (Angular SSG)"
 }
