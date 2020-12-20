@@ -7,6 +7,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <a [routerLink]="['/']"
          routerLinkActive
       >Blog</a>
+      <a [routerLink]="['/about']"
+         routerLinkActive
+      >Welcome</a>
     </nav>
   `,
   styles: [],
