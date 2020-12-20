@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-blog-list',
   template: `
-    <div>
+    <div class="flex flex-col divide-y divide-gray-400">
       <app-blog-list-item *ngFor="let post of posts$ | async" [route]="post"></app-blog-list-item>
     </div>
   `,

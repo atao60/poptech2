@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+// @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+@import 'tailwindcss/base';
+@import './assets/code.scss';
+@import './assets/custom-tailwind-base.css';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out,
+    border-color 200ms ease-in-out, fill 200ms ease-in-out, stroke 200ms ease-in-out;
+}

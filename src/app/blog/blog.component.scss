@@ -1,7 +1,82 @@
-h1 {
-  color:rgb(51, 6, 37);
-  background-color: rgb(248, 211, 236);
-  padding: 5px;
-  border-radius: 5px;
-  width: fit-content;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply mb-2 mt-8;
+}
+
+strong {
+  @apply font-bold;
+}
+
+h6 {
+  @apply flex border-b border-solid border-gray-dark;
+
+  & > strong {
+    @apply font-thin text-sm px-2 py-1 mt-4 text-white;
+    background-color: #2e3440;
+  }
+
+  & + pre {
+    @apply mt-0;
+  }
+}
+
+a:not(.tag-link) {
+  @apply text-primary underline cursor-pointer;
+}
+
+iframe {
+  @apply mt-4 mb-2 mx-auto max-w-full min-h-full;
+
+  & + p {
+    @apply text-center mt-2-rev;
+    & > em {
+      @apply text-sm;
+    }
+  }
+}
+
+blockquote {
+  @apply text-gray-medium my-4 py-1 px-2 border-l-4 border-gray-dark border-solid;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol,
+ul {
+  @apply ml-8 my-4;
+}
+
+li,
+p {
+  @apply font-thin leading-7 text-lg;
+}
+
+p {
+  @apply my-4;
+  & > img ~ em {
+    @apply block text-center text-sm;
+  }
+}
+
+iframe {
+  @apply w-full min-h-128;
+}
+
+:not(pre) > code {
+  @apply text-secondary rounded px-1 font-thin break-words;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+:host ::ng-deep .utterances {
+  max-width: 100% !important;
 }
