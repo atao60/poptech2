@@ -3,14 +3,18 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run blog:start",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
     "scully:serve": "scully serve",
-    "preinstall": "npm-force-resolutions"
+    "preinstall": "npm-force-resolutions",
+    "blog:dev:build": "ng build --prod --stats-json --delete-output-path && npm run scully -- --scanRoutes",
+    "blog:build": "npm run blog:dev:build",
+    "blog:dev:start": "npm run blog:dev:build && npm run scully:serve -- --open",
+    "blog:start": "npm run blog:dev:start"
   },
   "private": true,
   "dependencies": {
