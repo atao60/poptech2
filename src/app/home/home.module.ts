@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { homeRoutingComponents, HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
-  declarations: [HomeComponent, ...homeRoutingComponents],
+  declarations: [...homeRoutingComponents, NavigationComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
-  ]
+  ],
+  exports: [NavigationComponent]
 })
 export class HomeModule { }

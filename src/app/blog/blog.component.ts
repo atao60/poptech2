@@ -1,19 +1,20 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ActivatedRoute, Router, ROUTES} from '@angular/router';
-
-declare var ng: any;
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
   preserveWhitespaces: true,
-  encapsulation: ViewEncapsulation.Emulated
-
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BlogComponent implements OnInit {
-  ngOnInit() {}
+export class BlogComponent {
+  post$: Observable<ScullyRoute>;
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(
+    private readonly scullyRoutesService: ScullyRoutesService
+  ) {
+    this.post$ = this.scullyRoutesService.getCurrent();
   }
 }
