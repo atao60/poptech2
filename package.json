@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "scully": "scully",
     "scully:serve": "scully serve",
-    "preinstall": "npm-force-resolutions",
+    "preinstall": "npx npm-force-resolutions",
     "blog:dev:build": "ng build --prod --stats-json --delete-output-path && rimraf dist/static && npm run scully -- --scanRoutes",
     "blog:build": "npm run blog:dev:build",
     "blog:dev:start": "npm run blog:dev:build && npm run scully:serve -- --open",
