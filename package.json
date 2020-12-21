@@ -14,7 +14,8 @@
     "blog:dev:build": "ng build --prod --stats-json --delete-output-path && rimraf dist/static && npm run scully -- --scanRoutes",
     "blog:build": "npm run blog:dev:build",
     "blog:dev:start": "npm run blog:dev:build && npm run scully:serve -- --open",
-    "blog:start": "npm run blog:dev:start"
+    "blog:start": "npm run blog:dev:start",
+    "blog:prod:build": "npm run blog:dev:build -- --configFile scully.popsuite-site.config.prod.ts"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +39,7 @@
     "@angular-devkit/build-angular": "~0.1100.5",
     "@angular/cli": "~11.0.5",
     "@angular/compiler-cli": "~11.0.5",
+    "@scullyio/scully-plugin-base-href-rewrite": "^1.0.0-beta.0",
     "@types/node": "^14.14.14",
     "autoprefixer": "^10.1.0",
     "npm-force-resolutions": "0.0.3",
