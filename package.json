@@ -11,7 +11,7 @@
     "scully": "scully",
     "scully:serve": "scully serve",
     "preinstall": "npm-force-resolutions",
-    "blog:dev:build": "ng build --prod --stats-json --delete-output-path && npm run scully -- --scanRoutes",
+    "blog:dev:build": "ng build --prod --stats-json --delete-output-path && rimraf dist/static && npm run scully -- --scanRoutes",
     "blog:build": "npm run blog:dev:build",
     "blog:dev:start": "npm run blog:dev:build && npm run scully:serve -- --open",
     "blog:start": "npm run blog:dev:start"
@@ -45,6 +45,7 @@
     "postcss-import": "^14.0.0",
     "postcss-loader": "^4.1.0",
     "postcss-scss": "^3.0.4",
+    "rimraf": "^3.0.2",
     "scully-plugin-minify-html": "^5.0.0",
     "tailwindcss": "^2.0.2",
     "ts-node": "~9.1.1",
